@@ -1,0 +1,15 @@
+# mysql:
+#   image: mysql:5.6
+#   environment:
+#     MYSQL_ROOT_PASSWORD: secret_password
+#     MYSQL_USER: octopusapp
+#     MYSQL_PASSWORD: octopusapp
+#     MYSQL_DATABASE: octopusapp
+#   ports:
+#     - "3306"
+app:
+  build: .
+  # links:
+  #   - mysql
+  ports:
+    - "8888:8888"
